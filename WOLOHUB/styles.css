@@ -46,7 +46,7 @@ body {
     position: fixed;
     top: 0;
     right: -250px; /* Начальное положение за правым краем экрана */
-    width: 250px;
+    width: 150px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9); /* Цвет фона меню с прозрачностью */
     padding: 20px;
@@ -122,6 +122,7 @@ body {
 }
 
 .anime-image {
+    position: relative;
     display: block;
     margin: 0 auto;
     border-radius: 10px; /* Закругление краёв */
@@ -138,6 +139,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 5px; /* Расстояние между кнопками */
+    width: 100%;
 }
 
 .tg-button {
@@ -167,14 +169,35 @@ body {
     /* Повторяйте этот блок стилей для кнопок от 11 до 100 */
     width: 50px;
     height: 50px;
-    background-color: green;
     color: white;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
 }
+.search-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
 
+/* Стили для поля ввода */
+#searchInput {
+    opacity: 0.8;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px; /* Закругление углов */
+    background-color: #000; /* Черный цвет фона */
+    color: #fff; /* Белый цвет текста */
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Стили для текста в поле ввода при фокусе */
+#searchInput:focus {
+    outline: none; /* Убираем рамку фокуса */
+}
 
 .anime-title {
     font-size: 40px; /* Размер текста */

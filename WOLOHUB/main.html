@@ -47,8 +47,77 @@
         <button class="tops-button" onclick="location.href='main.html'">Топы</button>
         <button class="info-button">Информация</button>
     </div>
-
+    <div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchAnime()" placeholder="Поиск по названию...">
+</div>
     <div class="content">
+    <!-- Карточка аниме 1 -->
+        <div class="anime-card">
+            <a href="tetrad_smerti.html">
+                <div class="anime-image">
+                    <img src="logos/tetrad-smerti.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Тетрадь смерти</p>
+                    <p class="anime-episodes">37 серий</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Добавьте еще 4 карточки аниме по аналогии -->
+
+    <!-- Карточка аниме 2 -->
+        <div class="anime-card">
+            <a href="tokyo_ghoul.html">
+                <div class="anime-image">
+                    <img src="logos/ghoul.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Токийский Гуль</p>
+                    <p class="anime-episodes">49 серий</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Карточка аниме 3 -->
+        <div class="anime-card">
+            <a href="berserk.html">
+                <div class="anime-image">
+                    <img src="logos/berserk.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Берсерк. 1997</p>
+                    <p class="anime-episodes">25 серий</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Карточка аниме 4 -->
+        <div class="anime-card">
+            <a href="neverland.html">
+                <div class="anime-image">
+                    <img src="logos/neverland.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Обещанный неверленд</p>
+                    <p class="anime-episodes">33 серии</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Карточка аниме 5 -->
+        <div class="anime-card">
+            <a href="za_granyu.html">
+                <div class="anime-image">
+                    <img src="logos/za_granyu.jpeg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">За гранью</p>
+                    <p class="anime-episodes">13 серий</p>
+                </div>
+            </a>
+        </div>
+        <div class="content">
     <!-- Карточка аниме 1 -->
         <div class="anime-card">
             <a href="tetrad_smerti.html">
@@ -120,5 +189,28 @@
     <div class="content-blur"></div>
 
     <script src="script.js"></script>
+<script>
+    function searchAnime() {
+        // Получаем значение из поля ввода
+        var input = document.getElementById("searchInput");
+        var filter = input.value.toUpperCase();
+        
+        // Получаем все карточки аниме
+        var cards = document.querySelectorAll(".anime-card");
+
+        // Проходим по каждой карточке аниме
+        for (var i = 0; i < cards.length; i++) {
+            var title = cards[i].querySelector(".anime-title");
+            
+            // Если текст карточки содержит введенный текст, отображаем карточку, иначе скрываем
+            if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
