@@ -135,18 +135,34 @@ body {
     transform: scale(1.1); /* Увеличение изображения при наведении на него */
 }
 
-/* Для мобильных устройств */
 @media only screen and (max-width: 768px) {
-    .content {
-        display: flex;
-        flex-wrap: wrap;
+    .anime-card {
+        transition: transform 0.3s ease;
+        opacity: 0.8;
+        width: calc(100% - 20px); /* Ширина карточки - половина ширины экрана минус отступы */
+        margin-bottom: 20px; /* Отступ снизу */
+        background-color: #000;
+        border-radius: 20px;
+        overflow: hidden; /* Чтобы предотвратить выход за пределы контейнера */
+        flex: 1 1 100%; /* Это позволит элементам равномерно распределяться по строке */
+        max-width: calc(100% - 20px); /* Устанавливаем максимальную ширину карточки */
     }
 
-    .anime-card {
-        width: calc(50% - 20px); /* 50% ширины экрана с учетом отступа */
-        margin: 10px;
+    .anime-card:hover {
+        transform: scale(1.1); /* Увеличиваем карточку в 1.2 раза при наведении */
+    }
+
+    .anime-image {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px; /* Закругление краёв */
+        max-width: 70%; /* Максимальная ширина - 100% */
+        height: auto; /* Автоматическое регулирование высоты */
+        transition: transform 0.3s ease;
     }
 }
+
 .series-buttons {
     display: flex;
     flex-wrap: wrap;
