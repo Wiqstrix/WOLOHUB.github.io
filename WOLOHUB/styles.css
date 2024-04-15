@@ -135,6 +135,20 @@ body {
     transform: scale(1.1); /* Увеличение изображения при наведении на него */
 }
 
+/* Для устройств с шириной экрана до 768px (мобильные устройства) */
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .anime-card {
+        width: calc(50% - 10px); /* Расчет ширины карточки с учетом отступа */
+        margin-bottom: 20px; /* Добавим немного отступа снизу между карточками */
+    }
+}
+
 .series-buttons {
     display: flex;
     flex-wrap: wrap;
