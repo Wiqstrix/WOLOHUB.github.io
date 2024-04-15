@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топы аниме</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'Cruinn';
+            src: url('ofont.ru_Cruinn.ttf') format('truetype');
+            /* Добавьте другие форматы шрифта для поддержки разных браузеров, если это необходимо */
+        }
+        body {
+            font-family: 'Cruinn', sans-serif; /* Используйте шрифт Cruinn для всего текста на сайте */
+            margin: 0;
+            padding: 0;
+        }
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            opacity: 1; /* Прозрачность видео */
+            background-color: rgba(0, 0, 0, 0.8); /* Черный цвет с 80% прозрачности */
+        }
+    </style>
+</head>
+<body>
+    <img class="background-gif" src="fon.gif" alt="Background GIF">
+
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <button class="menu-button">
+            <img src="menu.png" alt="Menu">
+        </button>
+    </div>
+
+    <div id="sidebar" class="menu">
+        <button class="back-button">Назад</button>
+        <button class="home-button" onclick="location.href='index.html'">Главная</button>
+        <button class="tops-button" onclick="location.href='main.html'">Топы</button>
+        <button class="info-button">Информация</button>
+    </div>
+
+    <div class="content">
+    <!-- Карточка аниме 1 -->
+        <div class="anime-card">
+            <a href="tetrad_smerti.html">
+                <div class="anime-image">
+                    <img src="logos/tetrad-smerti.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Тетрадь смерти</p>
+                    <p class="anime-episodes">37 серий</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Добавьте еще 4 карточки аниме по аналогии -->
+
+    <!-- Карточка аниме 2 -->
+        <div class="anime-card">
+            <a href="tetrad_smerti.html">
+                <div class="anime-image">
+                    <img src="logos/tetrad-smerti.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Тетрадь смерти</p>
+                    <p class="anime-episodes">37 серий</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Карточка аниме 3 -->
+        <div class="anime-card">
+            <a href="tetrad_smerti.html">
+                <div class="anime-image">
+                    <img src="logos/tetrad-smerti.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Тетрадь смерти</p>
+                    <p class="anime-episodes">37 серий</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Карточка аниме 4 -->
+        <div class="anime-card">
+            <a href="tetrad_smerti.html">
+                <div class="anime-image">
+                    <img src="logos/tetrad-smerti.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Тетрадь смерти</p>
+                    <p class="anime-episodes">37 серий</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Карточка аниме 5 -->
+        <div class="anime-card">
+            <a href="tetrad_smerti.html">
+                <div class="anime-image">
+                    <img src="logos/tetrad-smerti.jpg" alt="Anime Image">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-title">Тетрадь смерти</p>
+                    <p class="anime-episodes">37 серий</p>
+                </div>
+            </a>
+        </div>
+
+
+    <div class="content-blur"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
