@@ -198,7 +198,7 @@ body {
 }
 
 .watch-button {
-  background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+  background-image: linear-gradient(to right, rgb(128,128,128), rgb(165,165,165));
   border: 0;
   color: rgba(var(--text-color));
 }
