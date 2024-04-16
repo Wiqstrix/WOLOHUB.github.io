@@ -19,7 +19,7 @@ body {
 }
 
 .logo img {
-    width: 100px;
+    width: 50px;
     height: auto;
 }
 
@@ -89,6 +89,7 @@ body {
     background: none;
     cursor: pointer;
     color: #fff; /* Белый цвет текста */
+    z-index: 1000;
 }
 
 .content {
