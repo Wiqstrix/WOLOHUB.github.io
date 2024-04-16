@@ -181,6 +181,27 @@ body {
     cursor: pointer;
 }
 
+.buttn{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    padding: 12px 32px;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+.btn-glow{
+    box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+}
+
+.watch-button {
+  background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+  border: 0;
+  color: rgba(var(--text-color));
+}
+
 .series-button {
     width: 50px;
     height: 50px;
