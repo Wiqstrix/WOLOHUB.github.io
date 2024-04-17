@@ -203,6 +203,7 @@ body {
     cursor: pointer;
 }
 
+
 .adblock-button {
     width: auto;
     height: auto;
@@ -246,17 +247,11 @@ body {
     cursor: pointer;
 }
 
-/* Повторяем стиль для кнопок серий от 11 до 100 */
-.series-button:nth-child(n+11) {
-    /* Повторяйте этот блок стилей для кнопок от 11 до 100 */
-    width: 50px;
-    height: 50px;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
+.series-button.active {
+    background-color: green; /* Зеленый фон для активной кнопки */
 }
+
+
 .search-container {
     margin-top: 20px;
     margin-bottom: 20px;

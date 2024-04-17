@@ -71,7 +71,7 @@
             <div class="series-buttons">
                 <div class="the_invis the_hildi">
                     <h1 class="anime-title-site">                       Всего 1 серия - полнометражка</h1>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=1868150')">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=1868150'), setActive(this)">1</button>
 
                     <!-- Остальные кнопки здесь -->
                 </div>
@@ -113,6 +113,14 @@
                 videoFrame.src = "";
             }
         };
+        function setActive(element) {
+    // Удаляем класс 'active' у всех кнопок
+            document.querySelectorAll('.series-button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+        // Добавляем класс 'active' только к нажатой кнопке
+        element.classList.add('active');
+        }
     </script>
 </body>
 </html>

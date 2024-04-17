@@ -72,20 +72,20 @@
             <div class="series-buttons">
                 <div class="the_invis the_hildi">
                     <h1 class="anime-title-site">1.Сезон</h1>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451538')">1</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451541')">2</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451542')">3</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451545')">4</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451550')">5</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451553')">6</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451558')">7</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451563')">8</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451567')">9</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451572')">10</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451578')">11</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451580')">12</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451582')">13</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451585')">14</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451538'), setActive(this)">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451541'), setActive(this)">2</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451542'), setActive(this)">3</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451545'), setActive(this)">4</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451550'), setActive(this)">5</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451553'), setActive(this)">6</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451558'), setActive(this)">7</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451563'), setActive(this)">8</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451567'), setActive(this)">9</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451572'), setActive(this)">10</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451578'), setActive(this)">11</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451580'), setActive(this)">12</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451582'), setActive(this)">13</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5451585'), setActive(this)">14</button>
                 </div>
             </div>
         </div>
@@ -125,6 +125,14 @@
                 videoFrame.src = "";
             }
         };
+        function setActive(element) {
+    // Удаляем класс 'active' у всех кнопок
+            document.querySelectorAll('.series-button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+        // Добавляем класс 'active' только к нажатой кнопке
+        element.classList.add('active');
+        }
     </script>
 </body>
 </html>

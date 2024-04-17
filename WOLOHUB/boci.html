@@ -71,18 +71,18 @@
             <div class="series-buttons">
                 <div class="the_invis the_hildi">
                     <h1 class="anime-title-site">1 сезон</h1>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4913873')">1</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4922759')">2</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4929497')">3</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4937284')">4</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4945445')">5</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4952176')">6</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4959947')">7</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4965357')">8</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4971972')">9</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4977919')">10</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4984338')">11</button>
-                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4991575')">12</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4913873'), setActive(this)">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4922759'), setActive(this)">2</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4929497'), setActive(this)">3</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4937284'), setActive(this)">4</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4945445'), setActive(this)">5</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4952176'), setActive(this)">6</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4959947'), setActive(this)">7</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4965357'), setActive(this)">8</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4971972'), setActive(this)">9</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4977919'), setActive(this)">10</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4984338'), setActive(this)">11</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4991575'), setActive(this)">12</button>
                     <!-- Остальные кнопки здесь -->
                 </div>
             </div>
@@ -123,6 +123,14 @@
                 videoFrame.src = "";
             }
         };
+        function setActive(element) {
+    // Удаляем класс 'active' у всех кнопок
+            document.querySelectorAll('.series-button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+        // Добавляем класс 'active' только к нажатой кнопке
+        element.classList.add('active');
+        }
     </script>
 </body>
 </html>
