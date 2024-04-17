@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Невероятные приключения ДжоДжо</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для модального окна */
+        .modal {
+            display: none; /* По умолчанию скрыто */
+            position: fixed; /* Позиционирование фиксированное */
+            z-index: 1; /* Поместить вверх на странице */
+            left: 0;
+            top: 0;
+            width: 100%; /* Ширина 100% */
+            height: 100%; /* Высота 100% */
+            overflow: hidden; /* Скрыть прокрутку */
+            background-color: rgba(0,0,0,0.7); /* Цвет фона */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 0 auto; /* Выравнивание по центру */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Ширина модального контента */
+            height: 90%; /* Высота модального контента */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Закрыть кнопку */
+        .close {
+            color: #aaaaaa;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: black;"> <!-- Задаем черный фон -->
+    <img class="background-gif" src="fon.gif" alt="Background GIF">
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="WOLOHUB Logo">
+        </div>
+        <button class="menu-button"><img src="back.png" alt="Menu" onclick="location.href='main.html'"></button>
+    </div>
+    <div class="menu" id="sidebar">
+        <button class="back-button">Назад</button>
+        <button class="home-button" onclick="location.href='index.html'">Главная</button>
+        <button class="tops-button" onclick="location.href='main.html'">Топы</button>
+        <button class="info-button">Информация</button>
+    </div>
+    <div class="content">
+        <div class="content-blur">
+            <h1 class="anime-title-site">Невероятные приключения ДжоДжо</h1>
+            <h2 class="anime-title-site">"Людям свойственно менять своё мнение"</h2>
+            <img src="logos\fonjojo.jpg" alt="Фото" class="anime-image-fon">
+            <h1 class="anime-title-site">Выбор серии:</h1>
+            <div class="series-buttons">
+                <div class="the_invis the_hildi">
+                    <h1 class="anime-title-site">1.Сезон</h1>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067761')">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067765')">2</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067767')">3</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067769')">4</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067771')">5</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067774')">6</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067778')">7</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066517')">8</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066523')">9</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066527')">10</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066534')">11</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066539')">12</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066544')">13</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066550')">14</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066556')">15</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066562')">16</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066569')">17</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066575')">18</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066581')">19</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3306216')">20</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066595')">21</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066602')">22</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066607')">23</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066612')">24</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066617')">25</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066621')">26</button>
+                </div>
+            </div>
+            <div class="series-buttons">
+                <div class="the_invis the_hildi">
+                    <h1 class="anime-title-site">2.Сезон, Рыцари звёздной пыли</h1>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066627')">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066632')">2</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066640')">3</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066720')">4</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066729')">5</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066738')">6</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066747')">7</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066752')">8</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066758')">9</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066761')">10</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066764')">11</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066767')">12</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3306219')">13</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066772')">14</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066775')">15</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066778')">16</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066782')">17</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066784')">18</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066787')">19</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066792')">20</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066794')">21</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066796')">22</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066799')">23</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066802')">24</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066807')">25</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066812')">26</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066817')">27</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066821')">28</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066824')">29</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066831')">30</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066836')">31</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066840')">32</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066844')">33</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3066861')">34</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067066')">35</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067296')">36</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067487')">37</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067539')">38</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067547')">39</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067550')">40</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067555')">41</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067559')">42</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067566')">43</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067572')">44</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067577')">45</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067581')">46</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067587')">47</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067592')">48</button>
+                </div>
+            </div>
+            <div class="series-buttons">
+                <div class="the_invis the_hildi">
+                    <h1 class="anime-title-site">3.Сезон, Несокрушимый алмаз</h1>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067599')">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067603')">2</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067605')">3</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067609')">4</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067611')">5</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067615')">6</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067617')">7</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067621')">8</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067628')">9</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067630')">10</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067632')">11</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067636')">12</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067640')">13</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067643')">14</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067649')">15</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067652')">16</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067655')">17</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067657')">18</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067661')">19</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067665')">20</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067668')">21</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067670')">22</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067677')">23</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067681')">24</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067684')">25</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067686')">26</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067688')">27</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067696')">28</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067702')">29</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067704')">30</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067709')">31</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067711')">32</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067715')">33</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067718')">34</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067722')">35</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067726')">36</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067729')">37</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067733')">38</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3067737')">39</button>
+                </div>
+            </div>
+            <div class="series-buttons">
+                <div class="the_invis the_hildi">
+                    <h1 class="anime-title-site">4.Сезон, Золотой ветер</h1>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4766970')">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3468543')">2</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3471040')">3</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3475594')">4</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3481171')">5</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3484049')">6</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3488348')">7</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3492361')">8</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3497726')">9</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3501132')">10</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3506355')">11</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3510717')">12</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3516913')">13</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3528141')">14</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3532602')">15</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3537773')">16</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3541001')">17</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3545690')">18</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3550281')">19</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3555670')">20</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3560499')">21</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3573118')">22</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3578517')">23</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3583233')">24</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3587450')">25</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3591950')">26</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3596491')">27</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3604306')">28</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3610074')">29</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3614789')">30</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3619799')">31</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3625034')">32</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3629792')">33</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3633699')">34</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3637713')">35</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3643224')">36</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3646630')">37</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3663243')">38</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=3663244')">39</button>
+                </div>
+            </div>
+            <div class="series-buttons">
+                <div class="the_invis the_hildi">
+                    <h1 class="anime-title-site">5.Сезон, Каменный океан</h1>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4969349')">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700420')">2</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700425')">3</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700427')">4</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700431')">5</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700439')">6</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700447')">7</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700454')">8</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700459')">9</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700466')">10</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700475')">11</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4700486')">12</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4963343')">13</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4963345')">14</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4963348')">15</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=4963354')">16</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5027972')">17</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5029184')">18</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5033224')">19</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5033733')">20</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5042521')">21</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5065580')">22</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5069505')">23</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5069540')">24</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5080026')">25</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5097074')">26</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5103332')">27</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5110247')">28</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5147273')">29</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5147278')">30</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5164097')">31</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5172902')">32</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5181533')">33</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5206487')">34</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5232034')">35</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5232038')">36</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5232040')">37</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5235868')">38</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoFrame" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Открывает модальное окно с указанным видео
+        function openModal(videoUrl) {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "block";
+            const videoFrame = document.getElementById("videoFrame");
+            videoFrame.src = videoUrl;
+        }
+
+        // Закрывает модальное окно при нажатии на кнопку "Закрыть"
+        document.getElementsByClassName("close")[0].onclick = function () {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            const videoFrame = document.getElementById("videoFrame");
+            videoFrame.src = "";
+        };
+
+        // Закрывает модальное окно, если пользователь кликает за его пределами
+        window.onclick = function (event) {
+            const modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+                const videoFrame = document.getElementById("videoFrame");
+                videoFrame.src = "";
+            }
+        };
+    </script>
+</body>
+</html>
