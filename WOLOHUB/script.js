@@ -10,4 +10,3 @@ const backButton = document.querySelector('.back-button');
 backButton.addEventListener('click', () => {
     menu.classList.remove('menu-open');
 });
-

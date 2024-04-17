@@ -106,6 +106,13 @@ body {
     object-fit: cover; /* Позволяет изображению заполнить доступное пространство, сохраняя при этом пропорции */
 }
 
+.anime-image-fon img {
+    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    object-fit: cover; /* Позволяет изображению заполнить доступное пространство, сохраняя при этом пропорции */
+}
+
 .anime-card {
     transition: transform 0.3s ease;
     opacity: 0.8;
@@ -130,6 +137,20 @@ body {
     max-width: 70%; /* Максимальная ширина - 100% */
     height: auto; /* Автоматическое регулирование высоты */
     transition: transform 0.3s ease;
+}
+
+.anime-image-fon{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* Закругление краёв */
+    max-width: 70%; /* Максимальная ширина - 100% */
+    height: auto; /* Автоматическое регулирование высоты */
+    transition: transform 0.3s ease;
+}
+
+.anime-image-fon:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении на него */
 }
 
 .anime-image:hover {
