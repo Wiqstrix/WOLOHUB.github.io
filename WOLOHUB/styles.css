@@ -177,7 +177,7 @@ body {
     .anime-image {
         position: relative;
         display: block;
-        margin: 0 auto;
+        margin: 2px 2.5em 0 auto;
         border-radius: 10px; /* Закругление краёв */
         max-width: 70%; /* Максимальная ширина - 100% */
         height: auto; /* Автоматическое регулирование высоты */
