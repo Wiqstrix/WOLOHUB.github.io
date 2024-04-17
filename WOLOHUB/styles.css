@@ -203,6 +203,17 @@ body {
     cursor: pointer;
 }
 
+.adblock-button {
+    width: auto;
+    height: auto;
+    background-color: red;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .buttn{
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
