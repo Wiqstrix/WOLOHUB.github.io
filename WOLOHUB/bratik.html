@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой братик больше не братик!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для модального окна */
+        .modal {
+            display: none; /* По умолчанию скрыто */
+            position: fixed; /* Позиционирование фиксированное */
+            z-index: 1; /* Поместить вверх на странице */
+            left: 0;
+            top: 0;
+            width: 100%; /* Ширина 100% */
+            height: 100%; /* Высота 100% */
+            overflow: hidden; /* Скрыть прокрутку */
+            background-color: rgba(0,0,0,0.7); /* Цвет фона */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 0 auto; /* Выравнивание по центру */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Ширина модального контента */
+            height: 90%; /* Высота модального контента */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Закрыть кнопку */
+        .close {
+            color: #aaaaaa;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: black;"> <!-- Задаем черный фон -->
+    <img class="background-gif" src="fon.gif" alt="Background GIF">
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="WOLOHUB Logo">
+        </div>
+        <button class="menu-button"><img src="back.png" alt="Menu" onclick="location.href='main.html'"></button>
+    </div>
+    <div class="menu" id="sidebar">
+        <button class="back-button">Назад</button>
+        <button class="home-button" onclick="location.href='index.html'">Главная</button>
+        <button class="tops-button" onclick="location.href='main.html'">Топы</button>
+        <button class="info-button">Информация</button>
+    </div>
+    <div class="content">
+        <div class="content-blur">
+            <h1 class="anime-title-site">Мой братик больше не братик!</h1>
+            <h2 class="anime-title-site">p.s. самое мужское аниме)</h2>
+            <img src="logos\fonbratik.jpg" alt="Фото" class="anime-image-fon">
+            <h1 class="anime-title-site">Выбор серии:</h1>
+            <div class="series-buttons">
+                <div class="the_invis the_hildi">
+                    <h1 class="anime-title-site">1.Сезон</h1>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5000173')">1</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5008373')">2</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5014930')">3</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5023565')">4</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5030752')">5</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5038540')">6</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5047646')">7</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5057594')">8</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5066369')">9</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5072421')">10</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5078725')">11</button>
+                    <button class="series-button" onclick="openModal('https://video.sibnet.ru/shell.php?videoid=5086190')">12</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoFrame" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Открывает модальное окно с указанным видео
+        function openModal(videoUrl) {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "block";
+            const videoFrame = document.getElementById("videoFrame");
+            videoFrame.src = videoUrl;
+        }
+
+        // Закрывает модальное окно при нажатии на кнопку "Закрыть"
+        document.getElementsByClassName("close")[0].onclick = function () {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            const videoFrame = document.getElementById("videoFrame");
+            videoFrame.src = "";
+        };
+
+        // Закрывает модальное окно, если пользователь кликает за его пределами
+        window.onclick = function (event) {
+            const modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+                const videoFrame = document.getElementById("videoFrame");
+                videoFrame.src = "";
+            }
+        };
+    </script>
+</body>
+</html>
