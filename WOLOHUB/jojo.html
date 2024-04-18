@@ -311,23 +311,30 @@
             videoFrame.src = "";
         };
 
-        // Закрывает модальное окно, если пользователь кликает за его пределами
-        window.onclick = function (event) {
-            const modal = document.getElementById("myModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-                const videoFrame = document.getElementById("videoFrame");
-                videoFrame.src = "";
-            }
-        };
         function setActive(element) {
-    // Удаляем класс 'active' у всех кнопок
+        // Удаляем класс 'active' у всех кнопок
             document.querySelectorAll('.series-button').forEach(function(button) {
                 button.classList.remove('active');
             });
         // Добавляем класс 'active' только к нажатой кнопке
-        element.classList.add('active');
+            element.classList.add('active');
+        // Сохраняем номер активной кнопки в Local Storage
+            localStorage.setItem('activeButton', element.textContent);
         }
+
+        function loadActiveButton() {
+            var activeButtonNumber = localStorage.getItem('activeButton');
+            if (activeButtonNumber) {
+                var buttons = document.querySelectorAll('.series-button');
+                buttons.forEach(function(button) {
+                    if (button.textContent === activeButtonNumber) {
+                        button.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadActiveButton);
     </script>
 </body>
 </html>
